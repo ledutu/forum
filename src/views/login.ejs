@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Responsive HTML5 Template">
+    <meta name="author" content="author.com">
+    <title>Home</title>
+
+    <%- include('layouts/head') %>
+</head>
+<body>
+    
+    <%- include('layouts/notification') %> 
+    
+    <div class="signup">
+        <!-- HEADER -->
+        <header class="signup__header">
+            <div class="container">
+                <div class="signup__header-content">
+                    <p><a href="#">Don't have an account?</a></p>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main class="signup__main">
+            <img class="signup__bg" src="/forum/images/signup-bg.png" alt="bg">
+
+            <div class="container">
+                <div class="signup__container">
+                    <div class="signup__logo">
+                        <a><img src="/forum/fonts/icons/main/Logo_Forum.svg" alt="logo">Unity</a>
+                    </div>
+
+                    <div class="signup__head">
+                        <h3>Đăng Nhập</h3>
+                        <!-- <p>By singin up you can start posting, replaying to topics, earn badges, favorite, vote topics and many more.</p> -->
+                    </div>
+                    <form action="/auth/login" class="signup__form" method="POST" >
+                        <div class="signup__section">
+                            <label class="signup__label" for="email">Tài khoản</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email hoặc username" value="" required>
+                        </div>
+                        <div class="signup__section">
+                            <label class="signup__label" for="password">Mật khẩu</label>
+                            <div class="message-input">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="***********" value="" required>
+                            </div>
+                        </div>
+                        <input type="submit" class="signup__btn-create btn btn--type-02" value="Đăng nhập">
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="signup__footer">
+            <div class="container">
+                <div class="signup__footer-content">
+                    <ul class="signup__footer-menu">
+                        <li><a href="#">Teams</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Send Feedback</a></li>
+                    </ul>
+                    <ul class="signup__footer-social">
+                        <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <!-- <li><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i></a></li> -->
+                        <!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JAVA SCRIPT -->
+    <%- include('layouts/javascript') %> 
+
+</body>
+</html>
